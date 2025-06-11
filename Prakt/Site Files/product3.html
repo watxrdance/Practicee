@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>koe no katachi | selfhate?</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Тот же стиль */
+    .product-detail {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .product-info {
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .product-info h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .product-info .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .product-info select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .btn.add-to-cart {
+      padding: 12px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .btn.add-to-cart:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">selfhate?</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="cart.html">Корзина (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="back-container">
+        <a href="index.html" class="back-btn">← Назад</a>
+    </div>
+
+    <section class="product-detail">
+      <div class="product-image" id="product-images">
+        <img src="exam1/koe no katachi 1.jpg" class="thumb active" alt="front">
+        <img src="exam1/koe no katachi 2.png" class="thumb" alt="back">
+        <img src="exam1/koe no katachi razmerka.jpg" class="thumb" alt="size">
+      </div>
+      <div class="product-info">
+        <h2>koe no katachi</h2>
+        <p class="price">2500 ₽</p>
+        <p>Уникальные оверсайз лекало<br>
+            Плотность футболки 300 gr/m<br>
+            Печать вытравка, ничего не порвется, не потрескается, максимум выцветет через пару лет<br>
+            Быстрые отправки в течение пары рабочих дней<br>
+        </p>
+
+        <label for="size-select">Выберите размер:</label>
+        <select id="size-select">
+          <option value="S">S</option>
+          <option value="M" selected>M</option>
+          <option value="L">L</option>
+        </select>
+
+        <button class="btn add-to-cart">Добавить в корзину</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; selfhate? 2025</p>
+  </footer>
+
+  <script>
+    const addToCartBtn = document.querySelector('.add-to-cart');
+    addToCartBtn.addEventListener('click', () => {
+      const size = document.getElementById('size-select').value;
+      alert(`Товар добавлен в корзину (размер: ${size})`);
+    });
+  </script>
+</body>
+</html>
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+
+<script src="index.js"></script>
+</body>
+</html>
